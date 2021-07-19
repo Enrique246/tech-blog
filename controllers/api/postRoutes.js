@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
     } else {
       try {
         const requireBody = req.body;
-        requireBody.user_id = req.session.userId;
+        requireBody.user_id = req.session.user_id;
         const PostData = await Post.create(requireBody);
         res.status(200).json(PostData);
       } catch (err) {

@@ -28,17 +28,6 @@ User.init(
               isEmail:true,
             }
           },
-          age:{
-            type: DataTypes.INTEGER,
-            allowNull:false,
-            validate:{
-              isNumeric: true, 
-            }
-          },
-          gender: {
-            type: DataTypes.STRING,
-            allowNull:false,
-          },
           password:{
             type:DataTypes.STRING,
             allowNull:false,
