@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { Example } = require('../../models');
+const { User } = require('../../models');
 
-//Profile Creator
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -20,7 +19,7 @@ router.post('/', async (req, res) => {
 // Login and logout code
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ where: { email: req.body.email }});
 
     if (!userData) {
       res
@@ -28,6 +27,10 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
+    
+    DataUser = userData.get({plain:true});
+    console.log(DataUser);
+    console.log(req.body.password);
 
     const validPassword = await userData.checkPassword(req.body.password);
 
@@ -59,7 +62,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
-module.exports = router;
 
 module.exports = router;
