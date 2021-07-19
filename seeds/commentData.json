@@ -1,18 +1,18 @@
 [
   {
-    "content": "I don't understand!!",
+    "text_comment": "I don't understand!!",
     "user_id": 1
   },
   {
-    "content": "What is this?",
+    "text_comment": "What is this?",
     "user_id": 2
   },
   {
-    "content": "Could you help me understand it?",
+    "text_comment": "Could you help me understand it?",
     "user_id": 2
   },
   {
-    "content": "Did you get this from wikipedia?",
+    "text_comment": "Did you get this from wikipedia?",
     "user_id": 3
   }
 ]
