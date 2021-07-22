@@ -2,16 +2,6 @@ const router = require('express').Router();
 const { Comment,Post,User } = require('../models');
 
 //Homepage
-// router.get('/', async (req, res) => {
-//   try {
-//     res.render('homepage', {
-//       loggedIn: req.session.logged_in,
-//       home: true
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 router.get('/', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -21,13 +11,20 @@ router.get('/', async (req, res) => {
       },
       include: [
         {
-          model: Post,
+          model: Comment,
           attributes: {
-            exclude: ["id"],
+            exclude: ["id", "user_id", "createdAt"],
+          },
+      include: [
+        {
+          model: User,
+          attributes: {
+            exclude: ["id, email, password"],
           },
         },
-        
-        ]
+      ],
+    }
+  ]
     });
     const posts = postData.map((post) => post.get({ plain: true }));
     console.log(posts)
@@ -41,5 +38,14 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+//Login
+router.get('/login', (req, res) => {
+  res.render('login',{
+    loggedIn: req.session.logged_in,
+    login: true
+  });
+});
+
 
 module.exports = router;

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 
 // Get post
-router.get("/:id", async (req, res) => {
+router.get("/", async (req, res) => {
     if (!req.session.loggedIn) {
       res.redirect("/login");
     } else {

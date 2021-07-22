@@ -1,6 +1,6 @@
 const logout = async () => {
     // Make a POST request to destroy the session on the back end
-    const response = await axios.post('/api/user-routes/logout', {
+    const response = await fetch.post('/api/user-routes/logout', {
     });
   
     if (response.status == 204) {

@@ -1,4 +1,27 @@
-<h1>Put content here.</h1>
-{{#each examples as |example|}}
-  <p>{{example.name}}</p>
-{{/each}}
+<main class="post-handlebar-main">
+    <h1>Posts</h1>
+    <div class="list-group">
+        {{#each post as |post|}}
+        <a href="#"class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 table-header">{{post.id}}&nbsp;{{post.title}}</h5>
+            </div>
+            
+            <p class="mb-1">{{post.body}}</p>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Book Class</button>
+        </div>
+        {{!-- <button type="button" class="btn btn-primary button col-8">Book Class</button> --}}
+        </a>
+        <br>
+        {{!-- <div class="col-8 text-center bg-white">
+        <button type="button" class="btn btn-primary button">Book Class</button>
+        </div> --}}
+        
+        {{/each}}
+    </div>
+</main>
+
+<script src="./js/update.js"></script>
+<script src="./js/comment.js"></script>
