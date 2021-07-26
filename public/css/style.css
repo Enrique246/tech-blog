@@ -31,3 +31,23 @@ textarea, input {
     min-width: 40%;
     min-height: 100px;
   }
+
+  .comment-form {
+    margin-bottom: 5%;
+  }
+  
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+
+  .comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+  }
+
+  .card {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}

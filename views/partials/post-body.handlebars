@@ -14,10 +14,10 @@
 
     <div class="card-content">
         <div class="content has-text-justified">
-            {{post_content}}
+            {{posts.body}}
         </div>
-            <div class="is-pulled-right">
-                <b>{{user.username}}</b> | 
+            <div class="">
+                <b>{{user.name}}</b> 
                 <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
             </div>
         
