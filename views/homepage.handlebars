@@ -1,6 +1,6 @@
 <main class="post-handlebar-main">
     <h1>Posts</h1>
-    <div class="list-group">
+    <div class="list-group list-group-item-action">
         {{#each posts as |posts|}}
         <a href="#"class="list-group-item list-group-item-action active" aria-current="true">
             <div class="d-flex w-100 justify-content-between">
@@ -8,12 +8,11 @@
             </div>
             
             <p class="mb-1">{{posts.body}}</p>
+            <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
 
             <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-primary">Edit</button>
+            {{!-- <button type="button" class="btn btn-primary">Edit</button> --}}
         </div>
-        {{!-- <button type="button" class="btn btn-primary button col-8">Book Class</button> --}}
-        </a>
         <br>
         {{!-- <div class="col-8 text-center bg-white">
         <button type="button" class="btn btn-primary button">Book Class</button>
