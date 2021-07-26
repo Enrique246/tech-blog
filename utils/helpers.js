@@ -6,4 +6,11 @@ module.exports = {
             new Date(date).getMonth() + 1
           }/${new Date(date).getFullYear()} at ${date.toLocaleTimeString()}`;
         },
+        format_plural: (word, amount) => {
+          if (amount !== 1) {
+            return `${word}s`;
+          }
+      
+          return word;
+      }
 };

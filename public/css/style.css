@@ -15,3 +15,19 @@ nav {
     width: 60%;
     margin-left: 22.5%;
 }
+
+textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid lightblue;
+  }
+  
+  textarea {
+    min-width: 40%;
+    min-height: 100px;
+  }

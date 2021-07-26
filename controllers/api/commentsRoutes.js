@@ -1,8 +1,19 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-// CREATE a new comment
-router.post('/', async (req, res) => {
+//Get comments
+router.get('/', (req, res) => {
+    Comment.findAll({})
+      .then(commentData => res.json(commentData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
+// Create a new comment
+router.post('/', withAuth, async (req, res) => {
     if (!req.session.loggedIn) {
         res.status(400).json({message:'Please sign in to create new comment'});
       } else {  

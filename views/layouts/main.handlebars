@@ -17,38 +17,18 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
 
-      {{#if home}}
-        <a class="nav-item nav-link" href="/post">Logout</a>
-        {{#if loggedIn}}
-          <a class="nav-item nav-link" href="/profile">Profile</a>
-          <a class="nav-item nav-link" id="logout">Log Out</button>
+      {{#if login}}
+          <a class="nav-item nav-link" href="/login">Log In</a>
+          <a class="nav-item nav-link" href="/">Home</a>
         {{else}}
           <a class="nav-item nav-link" href="/login">Log In</a>
-        {{/if}}
-      {{/if}}
-
-      {{#if profile}}
           <a class="nav-item nav-link" href="/">Home</a>
-          <a class="nav-item nav-link" href="/book">Book a Class</a>
+          <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+          <a class="nav-item nav-link" href="/dashboard/create/">New Post</a>
           <a class="nav-item nav-link" href="/login" id="logout">Log Out</a>
+        {{/if}}
 
-      {{/if}}
-
-      {{#if login}}
-          <a class="nav-item nav-link" href="/">Home</a>
-          <a class="nav-item nav-link" href="/book">Book a Class</a>
-      {{/if}}
-
-      {{#if book}}
-          <a class="nav-item nav-link" href="/">Home</a>
-          {{#if loggedIn}}
-            <a class="nav-item nav-link" href="/profile">Profile</a>
-            <a class="nav-item nav-link" href="/login" id="logout">Log Out</a>
-          {{else}}
-            <a class="nav-item nav-link" href="/login">Log In</a>
-            
-          {{/if}}
-      {{/if}}
+      
 
     </div>
   </div>
