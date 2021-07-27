@@ -63,7 +63,7 @@ router.get('/post/:id', (req, res) => {
         attributes: ['id', 'text_comment', 'post_id', 'user_id', 'createdAt'],
         include: {
           model: User,
-          attributes: ['name',]
+          attributes: ['name']
         }
       }
     ]
@@ -75,9 +75,10 @@ router.get('/post/:id', (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
+      const post = postData.get({ plain: true });
       console.log(postData)
       res.render('onepost', {
-        posts:postData,
+        posts:post,
         loggedIn: req.session.logged_in,
         home: true
       })

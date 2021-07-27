@@ -7,7 +7,7 @@ module.exports = {
 
           return `${new Date(date).getDate()}/${
             new Date(date).getMonth() + 1
-          }/${new Date(date).getFullYear()} `;
+          }/${new Date(date).getFullYear()} at ${date.toLocaleTimeString()}`;
           // at ${date.toLocaleTimeString()}
        
         },

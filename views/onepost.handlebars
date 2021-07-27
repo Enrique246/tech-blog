@@ -1,9 +1,10 @@
 <!-- Showing Articles -->
-{{> post-body post}}
+{{> post-body posts}}
 
 <!-- Display form and comments-->
 <!-- Display if logged_in -->
 {{#if logged_in}}
+{{posts.body}}
 <form class="comment-form">
   <div>
     <textarea class="ml-5" name="comment-body"></textarea>
