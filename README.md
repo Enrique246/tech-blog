@@ -57,6 +57,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ## Usage
 `npm start`
 `npm run seed`
+[Heroku Deploy Link](https://secret-stream-00472.herokuapp.com/)
+
 I managed to deploy the app and got to the point of viewing and conecting the routes so that the seeds can be viewed locally. 
 Unfortunately I was not able to finish to up to the point of making the creation buttons. So I plea to your mercy not to lower to much my points please.
 I ask you to run it locally and you will see that all my buttons work once you run the seeds.
@@ -75,4 +77,6 @@ I ask you to run it locally and you will see that all my buttons work once you r
 - Log out works
 - Routes work
 - No creation buttons added
+- No delete buttons added
 - Comment viewing button works
+- Viewing of seeds work
