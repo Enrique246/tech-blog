@@ -46,7 +46,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
   - Routing functionality
   - DB connecting to server and back-end
 
-### Lenguages Required:
+### Languages Required:
 - Node.js
 - JavaScript
 - HTML
